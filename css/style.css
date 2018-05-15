@@ -1,0 +1,583 @@
+/* =======Base Styles======== */
+
+:root {
+  --carrotDeepNavy: #34414F;
+  --carrotUIGrey: #898D93;
+  --carrotLightUIGrey: #C4C6C9;
+  --carrotDeepTan: #E4E3DE;
+  --carrotLightTan: #F2F1ED;
+  --carrotSmokeGrey: #E1E2E4;
+  --carrotCarrotOrange: #FA6654;
+  --carrotCoral: #FBE3DD;
+  --carrotFaintGrey: #E1E2E4;
+  --carrotCarrotGreen: #3FBD7C;
+  --carrotFaintEmerald: #D4F6E4;
+  --carrotGold: #FDAB1D;
+  --carrotLightGold: #FFF6DD;
+  --carrotSeaBlue: #6187F8;
+  --carrotChalkBlue: #E2EEFF;
+  --carrotLilac: #A66EF9;
+  --carrotLightLilac: #F5EDFF;
+}
+
+@font-face {
+  font-family: Avenir-Roman;
+  src: url('font/Avenir-Roman-12.ttf') format ('truetype');
+}
+
+@font-face {
+  font-family: Avenir-Heavy;
+  src: url('font/Avenir-Heavy-05.ttf') format ('truetype');
+}
+
+@font-face {
+  font-family: Avenir-Medium;
+  src: url('font/Avenir-Medium-09.ttf') format ('truetype');
+}
+
+@font-face {
+  font-family: Avenir-Black;
+  src: url('font/Avenir-Black-03.ttf') format ('truetype');
+}
+
+html {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+}
+
+body {
+  position: relative;
+  background-color: #FBFAF7;
+  font-family: Avenir-Roman, Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  color: var(--carrotDeepNavy);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  font-family: Avenir-Heavy;
+  font-size: 28px;
+  color: #34414F;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-family: Avenir-Black;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+li {
+  /* Home About Pricing B: */
+  font-family: Avenir-Medium;
+  font-size: 16px;
+  color: #373F4F;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 38px;
+}
+
+button {
+  border-radius: 100px;
+  font-family: Avenir-Heavy;
+  text-align: center;
+  outline: none;
+}
+
+h2 {
+  font-family: Avenir-Medium;
+  font-size: 16px;
+  color: #898D93;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+button:hover {
+  font-weight: bold;
+}
+
+/* Box-sizing */
+
+*, *::before, *::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* ====CUSTOM STYLES==== */
+
+.large-screen-nav {
+  display: none;
+}
+
+header {
+  position: relative;
+  margin-top: 0;
+  height: 72px;
+}
+
+.header-content {
+  position: absolute;
+  top: 0;
+  height: 72px;
+  width: 100%;
+  text-align: center;
+  background-color: #FBFAF7;
+  z-index: 999;
+}
+
+header * {
+  /* border: 1px blue solid; */
+}
+
+/* FOR WHEN MOBILE NAV DISPLAYED: */
+
+.logo-area {}
+
+.logo-area-fixed {
+  background: #fff;
+  position: fixed;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+}
+
+#logosvg {
+  padding-top: 24px;
+}
+
+.login-signup-area {
+  display: none;
+  margin: 40px 0px;
+}
+
+.mobile-toggle {
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px top: 20px;
+  bottom: 24px;
+  left: 14px;
+}
+
+.main-content {
+  /* display: none; */
+}
+
+.login-signup-area button {
+  margin: 8px auto;
+}
+
+.login-signup-area-call-to-action {
+  display: block;
+  background: #32C97B;
+  color: #FFFFFF;
+  padding: 12px 36px;
+  border: none;
+  width: 170px;
+  height: 48px;
+}
+
+.login-signup-area-call-to-action:hover {
+  background: #7edfad;
+}
+
+.login {
+  background: #D6F3E0;
+  padding: 12px 36px;
+  border: none;
+  width: 170px;
+  height: 48px;
+  color: #32C97B;
+}
+
+.login:hover {
+  background: #eaf9f3;
+}
+
+.mobilenav-footer {
+  padding-top: 32px;
+  background-color: #FFFDF9;
+  width: 100%;
+}
+
+.mobile-nav-footer-isNav {
+  background-color: #F8F7F3;
+  margin-top: 160px;
+}
+
+.navcolumn {
+  margin-top: 21px;
+}
+
+.navcolumn li {
+  display: block;
+  height: 52px;
+  outline: none;
+}
+
+.navcolumn li:focus, .navcolumn li:hover {
+  background: #e1e1dd;
+}
+
+.navcolumn h2 {
+  color: #C4C6C9;
+  text-align: center;
+}
+
+.copycolumn {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFFDF9;
+}
+
+.copycolumn hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  width: 80%
+}
+
+.copycolumn h2 {
+  color: #373F4F;
+  text-align: center;
+  width: 80%;
+}
+
+.copycolumn a {
+  font-family: Avenir-Roman;
+  font-size: 16px;
+  color: #3FBD7C;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: underline;
+}
+
+span {
+  display: block;
+}
+
+.copyright {
+  font-family: Avenir-Medium;
+  font-size: 14px;
+  color: #C4C6C9;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* Main content */
+
+.content-area {
+  text-align: center;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.content-area-1 {
+  margin-bottom: 59px;
+}
+
+.content-area-1 h1 {
+  font-family: Avenir-Heavy;
+  font-size: 24px;
+  color: #34414F;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
+.content-area-1 h2 {
+  margin-top: 15px;
+  margin-bottom: 28px;
+}
+
+.call-to-action, .call-to-action focus {
+  display: block;
+  width: 247px;
+  height: 48px;
+  margin: 28px auto 22px auto;
+  background: #FB5E48;
+  font-family: Avenir-Heavy;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-align: center;
+  border: none;
+}
+
+.call-to-action:hover {
+  background: #fb6e5a;
+}
+
+.content-area-1 h3, .content-area-7 h3 {
+  display: inline;
+  font-family: Avenir-Roman;
+  font-size: 12px;
+  color: #898D93;
+  letter-spacing: 0;
+  margin-top: 22px;
+  margin-right: 8px;
+  margin-left: 8px;
+  text-transform: none;
+}
+
+.content-area-2 {
+  padding-bottom: 80px;
+}
+
+.content-area-2 img {
+  width: 327px;
+  height: 188px;
+}
+
+.content-area-2 h1 {
+  margin-top: 31px;
+}
+
+.content-area-2 h2 {
+  /* Whether you’re shari: */
+  font-family: Avenir-Roman;
+  font-size: 18px;
+  color: #898D93;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+.content-area-3, .content-area-5, .content-area-7 {
+  background: #F8F7F3;
+}
+
+.content-area-3, .content-area-4, .content-area-5, .content-area-6, .content-area-7 {
+  padding-top: 77px;
+  padding-bottom: 90px;
+}
+
+.content-area-3 h3 {
+  color: #32C97B;
+}
+
+.content-area-4 h3 {
+  color: #FB5E48;
+}
+
+.content-area-5 h3 {
+  /* designed for slack t: */
+  color: #BA61FC;
+}
+
+.signup-input {
+  position: relative;
+  overflow: auto;
+  text-align: left;
+  margin-bottom: 21px;
+}
+
+.content-area-7 input {
+  background: #FFFFFF;
+  border: 1px solid #B1B8C0;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
+  height: 48px;
+  width: 100%;
+  outline: none;
+  padding-left: 16px;
+}
+
+.content-area-7 input placeholder {
+  /* Place Holder: */
+  font-family: Avenir-Book;
+  font-size: 14px;
+  color: #34414F;
+  letter-spacing: 0.17px;
+  line-height: 24px;
+}
+
+.content-area-7 button {
+  position: absolute;
+  height: 48px;
+  width: 137px;
+  right: 0;
+  background: #32C97B;
+  font-family: Avenir-Heavy;
+  font-size: 16px;
+  color: #FFFFFF;
+  border-radius: 0 4px 4px 0;
+  border: none;
+}
+
+#carrotSoloCopyright {
+  margin-top: 45px;
+}
+
+#carrotCopyright {
+  display: none;
+}
+
+/* ====MEDIA QUERIES==== */
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 38px;
+    line-height: 38px
+  }
+  .content-area-1 {
+    margin-top: 48px;
+  }
+  .content-area-1 h1 {
+    font-size: 48px;
+    line-height: 54px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .login-signup-area {
+    display: flex !important;
+    position: absolute;
+    right: 24px;
+    top: 6px;
+    bottom: 0;
+    margin: 0;
+    flex-direction: row-reverse;
+  }
+  #logosvg {
+    padding-top: 0px;
+    position: absolute;
+    left: 40px;
+    top: 22px;
+    bottom: 0;
+  }
+  .login {
+    width: 128px;
+    height: 40px;
+    font-family: Avenir-Medium;
+    display: inline;
+    background: none;
+    font-size: 16px;
+    color: #898D93;
+    letter-spacing: 0;
+  }
+  .login:hover {
+    background: none;
+  }
+  .login-signup-area-call-to-action {
+    background: rgb(50, 201, 123, .2);
+    font-family: Avenir-Heavy;
+    font-size: 16px;
+    color: #32C97B;
+    border-radius: 100px;
+    width: 128px;
+    height: 40px;
+    padding: 9px 19px 9px 19px;
+    line-height: 22px;
+  }
+  .login-signup-area-call-to-action:hover {
+    color: #fff;
+  }
+  .large-screen-nav {
+    display: block;
+    margin-top: 16px;
+  }
+  .large-screen-nav ul li {
+    /* FIX LATER: */
+    display: inline;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  .large-screen-nav ul li:hover {
+    font-weight: bold;
+  }
+  .content-area-2 img {
+    width: 90%;
+    height: auto;
+  }
+  h2 {
+    font-family: Avenir-Roman;
+    font-size: 20px;
+    color: #898D93;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 26px;
+  }
+  .content-area-1 h3, .content-area-7 h3 {
+    font-family: Avenir-Roman;
+    font-size: 14px;
+    color: #898D93;
+    letter-spacing: 0;
+  }
+  .call-to-action {
+    width: 184px;
+  }
+  .content-area-7 h2 {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .signup-input {
+    text-align: center;
+  }
+  .signup-input input {
+    width: 520px;
+  }
+  .signup-input button {
+    position: static;
+    margin-left: -137px;
+  }
+  .mobilenav-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  .copycolumn {
+    order: -1;
+    align-items: flex-start;
+  }
+  .copycolumn hr {
+    display: none !important;
+  }
+  .copycolumn h2 {
+    font-family: Avenir-Medium;
+    font-size: 16px;
+    width: 60%;
+    text-align: left;
+  }
+  #carrotSoloCopyright {
+    display: none;
+  }
+  #carrotCopyright {
+    display: block;
+  }
+  .navcolumn h2 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 19px;
+    margin-top: 0px;
+  }
+  .navcolumn li {
+    height: inherit;
+    line-height: 28px;
+    text-align: left;
+  }
+  .navcolumn li:hover {
+    background: none;
+  }
+}
